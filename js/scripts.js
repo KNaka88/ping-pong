@@ -14,6 +14,7 @@ $(function(){
   var checkIfNotNumber = function(){
     if(isNaN(userNumber)){
       alert("Please Type Nunber");
+      $("#show-results ul").append("<li>Please Type Number :( </li>");
     };
   };
 
@@ -26,11 +27,6 @@ $(function(){
 
 
 
-
-
-
-
-
   //STEP3: given the array, replace the specific numbers of array to according words;
   //using for-loop and when if you found either 15 or 5 or 3, replace
     //[1, 2, ping, 4, pong, ping, 7, 8, ping, pong,.....14, ping-pong]
@@ -38,14 +34,16 @@ $(function(){
   var replaceWords = function(){
     for(var i = 0; i < userNumberArray.length; i++){
 
-      if(userNumberArray[i] % 15 === 0){
-        userNumberArray[i] = "Ping-Pong";
+      if(userNumberArray[i] === 42){
+        userNumberArray[i] = '<a href="https://en.wikipedia.org/wiki/42_(number)#The_Hitchhiker.27s_Guide_to_the_Galaxy" id="forty-two">42: Answer to the Ultimate Question of Life, the Universe and Everything</a>';
+      }else if(userNumberArray[i] % 15 === 0){
+        userNumberArray[i] = "<span class='fifteen'>Ping-Pong</span>";
 
       }else if(userNumberArray[i] % 5 === 0){
-        userNumberArray[i] = "Pong";
+        userNumberArray[i] = "<span class='five'>Pong</span>";
 
       }else if(userNumberArray[i] % 3 === 0){
-        userNumberArray[i] = "Ping";
+        userNumberArray[i] = "<span class='three'>Ping</span>";
 
       }else{
         //Nothing Happens;
