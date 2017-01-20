@@ -14,6 +14,7 @@ $(function(){
     if(isNaN(userNumber)){
       alert("Please Type Nunber");
     }else{
+
       //if TRUE  userInput was number: follow STEP2
     };
   };
@@ -68,6 +69,13 @@ $(function(){
 
 
   //STEP4: Display the Array (using for-loop)
+
+  var showResult = function(){
+    userNumberArray.forEach(function(userNumberArray){
+      alert("Result:" + userNumberArray);
+    });
+  }
+  showResult();
 
 
 //FRONT LOGIC GOES HERE
