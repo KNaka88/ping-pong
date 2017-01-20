@@ -3,9 +3,9 @@ $(function(){
 //BACK LOGIC GOES HERE
 
   //Global Scope Variables
-
-  var userNumber = 24;
+  var userNumber = 0;
   var userNumberArray = [];
+
 
   //STEP1: given userInput, check if it is a number
     //if True: userInput was NOT number: return error sentence
@@ -13,9 +13,6 @@ $(function(){
   var checkIfNotNumber = function(){
     if(isNaN(userNumber)){
       alert("Please Type Nunber");
-    }else{
-
-      //if TRUE  userInput was number: follow STEP2
     };
   };
 
@@ -67,7 +64,7 @@ $(function(){
 
   var showResult = function(){
     userNumberArray.forEach(function(userNumberArray){
-      console.log("Result:" + userNumberArray);
+      $("#show-results ul").append("<li>" + userNumberArray + "</li>");
     });
   }
 
@@ -75,25 +72,31 @@ $(function(){
 ///////BACK END LOGIC ENDS////////////////////////
 
 
-//FRONT LOGIC GOES HERE
+///////FRONT LOGIC GOES HERE//////////////////////
+
+  $("form#user-number-form").submit(function(event){
+    $("#show-results ul li").remove();
+    //get the userInput
+    userNumber = parseInt($("input#user-number").val());
+    //call func STEP1
+    checkIfNotNumber();
+
+    //call func STEP2
+    convertToArray();
+
+    //call func STEP3
+    replaceWords();
+
+    //Call func Step4 Display:: show the result of the array
+
+    $("#show-results").show();
+    showResult(userNumberArray);
 
 
-  //get the userInput
 
-  //call func STEP1
-  checkIfNotNumber();
-
-  //call func STEP2
-  convertToArray();
-
-  //call func STEP3
-  replaceWords();
-
-  //Call func Step4 Display:: show the result of the array
-  showResult();
-  //"<li>" + "</li>""
-
-  ///If I finished early,
-  //show number and ping-pong words, gradually!!
-  //ping-pong, animation and color!!
+    ///If I finished early,
+    //show number and ping-pong words, gradually!!
+    //ping-pong, animation and color!!
+    event.preventDefault();
+  });
 });
