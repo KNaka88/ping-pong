@@ -1,6 +1,40 @@
+.jumbotron {
+  background-color: honeydew;
+  box-shadow: 4px 4px 3px #88aa88;
+}
+
+.jumbotron h1 {
+  font-size: 8rem;
+  font-family: 'Bungee Shade', cursive;
+  text-align: center;
+}
+
+#user-number-form button {
+  margin-top: 50px;
+}
+
+
+.section {
+  margin: 5px 5px 20px 5px;
+}
+
+
 #show-results {
   display: none;
+  border: 3px solid grey;
 }
+
+#show-results ul li{
+  list-style-position: inside;
+  list-style-type:  circle;
+  font-size: 1.7rem;
+}
+
+
+#show-results ul li:nth-child(odd){
+  background-color: white;
+}
+
 
 #forty-two {
   color: red;
