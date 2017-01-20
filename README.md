@@ -15,17 +15,21 @@
 ##### **Example Input:** 2
 ##### **Example Output:** 1, 2
 
+
 * Numbers divisible by 3 are replaced with "Ping"
 ##### **Example Input:** 3
 ##### **Example Output:** 1, 2, Ping
+
 
 * Numbers divisible by 5 are replaced with "Pong"
 ##### **Example Input:** 6
 ##### **Example Output:** 1, 2, Ping, 4, Pong, Ping
 
+
 * Numbers divisible by 15 are replaced with "Ping-Pong"
 ##### **Example Input:** 16
 ##### **Example Output:** 1, 2, Ping, 4, Pong ... 13, 14, Ping-Pong, 16
+
 
 * Numbers 42 are replaced with
     "42: Answer to the Ultimate Question of Life, the Universe and Everything"
