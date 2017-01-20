@@ -69,9 +69,14 @@ body {
   color: lightseagreen;
 }
 
+#show-results {
+  margin-bottom: 110px;
+}
+
 #show-results ul li {
   margin: 5px 0;
 }
+
 
 footer {
   background-color: steelblue;
@@ -92,8 +97,14 @@ footer a {
 @media only screen
   and (orientation:landscape)
   and (max-device-width: 1024px){
+
   footer {
     padding: 0;
     opacity: 0.6;
   }
+
+  #show-results {
+    margin-bottom: 60px;
+  }
+
 }

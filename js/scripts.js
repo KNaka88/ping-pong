@@ -57,6 +57,19 @@ $(function(){
   };
 
 
+  var mnuTimeout = null;
+    $("footer").mouseenter(function(){
+       clearTimeout(mnuTimeout);
+       mnuTimeout = setTimeout(function(){$('#pageFooterContent').animate({height: '250'}, 1000); },2000);
+    });
+
+    $("footer").mouseleave(function(){
+       clearTimeout(mnuTimeout);
+       mnuTimeout = setTimeout(function(){$('#pageFooterContent').animate({height: '0'}, 1000); },2000);
+    });
+
+
+
 
 
 
