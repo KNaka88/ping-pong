@@ -19,8 +19,8 @@
 * If user type not number, alert and result encourage user to type number
 ##### **Example Input:** Hello World
 ##### **Example Output:**
-###### Alert: Please type number
-###### Result: Please type number :(
+##### &nbsp;&nbsp;Alert: Please type number
+##### &nbsp;&nbsp;Result: Please type number :(
 
 
 * Numbers divisible by 3 are replaced with "Ping"
