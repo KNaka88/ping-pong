@@ -1,11 +1,12 @@
 $(function(){
 
-//BACK LOGIC GOES HERE
+//BACK LOGIC GOES HERE//////////////////////////////
+
 
   //Global Scope Variables
   var userNumber = 0;
   var userNumberArray = [];
-
+  ////////////////////////
 
   //STEP1: given userInput, check if it is a number
     //if True: userInput was NOT number: return error sentence
@@ -15,10 +16,6 @@ $(function(){
       alert("Please Type Nunber");
     };
   };
-
-
-
-
 
   //STEP2: given Usernumber, output the array
   var convertToArray = function(){
@@ -38,36 +35,31 @@ $(function(){
   //using for-loop and when if you found either 15 or 5 or 3, replace
     //[1, 2, ping, 4, pong, ping, 7, 8, ping, pong,.....14, ping-pong]
 
-    var replaceWords = function(){
-      for(var i = 0; i < userNumberArray.length; i++){
+  var replaceWords = function(){
+    for(var i = 0; i < userNumberArray.length; i++){
 
-        if(userNumberArray[i] % 15 === 0){
-          userNumberArray[i] = "Ping-Pong";
+      if(userNumberArray[i] % 15 === 0){
+        userNumberArray[i] = "Ping-Pong";
 
-        }else if(userNumberArray[i] % 5 === 0){
-          userNumberArray[i] = "Pong";
+      }else if(userNumberArray[i] % 5 === 0){
+        userNumberArray[i] = "Pong";
 
-        }else if(userNumberArray[i] % 3 === 0){
-          userNumberArray[i] = "Ping";
+      }else if(userNumberArray[i] % 3 === 0){
+        userNumberArray[i] = "Ping";
 
-        }else{
-          //Nothing Happens;
-        };
+      }else{
+        //Nothing Happens;
       };
     };
+  };
 
+  //STEP4: removed func and moved the program to Front Logic
 
-
-
-
-  //STEP4: Display the Array (using for-loop)
-
-  var showResult = function(){
-    userNumberArray.forEach(function(userNumberArray){
-      $("#show-results ul").append("<li>" + userNumberArray + "</li>");
-    });
-  }
-
+  //STEP5: RESET the result
+  var removeResult = function(){
+    userNumberArray = [];
+    $("#show-results ul li").remove();
+  };
 
 ///////BACK END LOGIC ENDS////////////////////////
 
@@ -75,24 +67,27 @@ $(function(){
 ///////FRONT LOGIC GOES HERE//////////////////////
 
   $("form#user-number-form").submit(function(event){
-    $("#show-results ul li").remove();
+    //delete the previous result (STEP5)
+    removeResult();
+
     //get the userInput
     userNumber = parseInt($("input#user-number").val());
-    //call func STEP1
+
+    //STEP1
     checkIfNotNumber();
 
-    //call func STEP2
+    //STEP2
     convertToArray();
 
-    //call func STEP3
+    //STEP3
     replaceWords();
 
-    //Call func Step4 Display:: show the result of the array
-
+    //show the result of the array (STEP4)
     $("#show-results").show();
-    showResult(userNumberArray);
 
-
+    userNumberArray.forEach(function(userNumberArray){
+      $("#show-results ul").append("<li>" + userNumberArray + "</li>");
+    });
 
     ///If I finished early,
     //show number and ping-pong words, gradually!!
