@@ -2,8 +2,26 @@ $(function(){
 
 //BACK LOGIC GOES HERE
 
+  //Global Scope Variables
+
+  var userInput = 0;
 
   //STEP1: given userInput, check if it is a number
+    //if True: userInput was NOT number: return error sentence
+
+  var checkIfNotNumber = function(){
+    if(isNaN(userInput)){
+      alert("Please Type Nunber");
+    }else{
+      alert("Number"); //for Debug
+      //if TRUE  userInput was number: follow STEP2
+    };
+  };
+
+  checkIfNotNumber();
+
+
+
 
 
 
