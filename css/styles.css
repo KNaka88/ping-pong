@@ -1,3 +1,8 @@
+body {
+  background-color: linen;
+}
+
+
 .jumbotron {
   background-color: honeydew;
   box-shadow: 4px 4px 3px #88aa88;
@@ -66,4 +71,29 @@
 
 #show-results ul li {
   margin: 5px 0;
+}
+
+footer {
+  background-color: steelblue;
+  border-top: 2px solid darkgrey;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+
+@media only screen
+  and (orientation:landscape)
+  and (max-device-width: 1024px){
+  footer {
+    padding: 0;
+    opacity: 0.6;
+  }
 }
