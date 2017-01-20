@@ -27,6 +27,12 @@
 ##### **Example Input:** 16
 ##### **Example Output:** 1, 2, Ping, 4, Pong ... 13, 14, Ping-Pong, 16
 
+* Numbers 42 are replaced with
+    "42: Answer to the Ultimate Question of Life, the Universe and Everything"
+##### **Example Input:** 16
+##### **Example Output:** 1, 2, Ping...39, Pong, 41, "42: Answer to the...and Everything"
+
+
 
 
 ## Setup/Installation Requirements

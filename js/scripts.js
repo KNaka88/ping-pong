@@ -1,5 +1,4 @@
 $(function(){
-
 //BACK LOGIC GOES HERE//////////////////////////////
 
 
@@ -27,9 +26,7 @@ $(function(){
 
 
 
-  //STEP3: given the array, replace the specific numbers of array to according words;
-  //using for-loop and when if you found either 15 or 5 or 3, replace
-    //[1, 2, ping, 4, pong, ping, 7, 8, ping, pong,.....14, ping-pong]
+  //STEP3: given the array, replace the specific numbers of array to according words
 
   var replaceWords = function(){
     for(var i = 0; i < userNumberArray.length; i++){
@@ -59,6 +56,12 @@ $(function(){
     $("#show-results ul li").remove();
   };
 
+
+
+
+
+
+
 ///////BACK END LOGIC ENDS////////////////////////
 
 
@@ -81,15 +84,12 @@ $(function(){
     replaceWords();
 
     //show the result of the array (STEP4)
-    $("#show-results").show();
+    $("#show-results").show()
+
 
     userNumberArray.forEach(function(userNumberArray){
       $("#show-results ul").append("<li>" + userNumberArray + "</li>");
     });
-
-    ///If I finished early,
-    //show number and ping-pong words, gradually!!
-    //ping-pong, animation and color!!
     event.preventDefault();
   });
 });
