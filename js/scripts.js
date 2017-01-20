@@ -4,7 +4,7 @@ $(function(){
 
   //Global Scope Variables
 
-  var userNumber = 10;
+  var userNumber = 24;
   var userNumberArray = [];
 
   //STEP1: given userInput, check if it is a number
@@ -14,7 +14,6 @@ $(function(){
     if(isNaN(userNumber)){
       alert("Please Type Nunber");
     }else{
-      alert("Number"); //for Debug
       //if TRUE  userInput was number: follow STEP2
     };
   };
@@ -45,6 +44,26 @@ $(function(){
   //using for-loop and when if you found either 15 or 5 or 3, replace
     //[1, 2, ping, 4, pong, ping, 7, 8, ping, pong,.....14, ping-pong]
 
+    var replaceWords = function(){
+      for(var i = 0; i < userNumberArray.length; i++){
+
+        if(userNumberArray[i] % 15 === 0){
+          userNumberArray[i] = "Ping-Pong";
+
+        }else if(userNumberArray[i] % 5 === 0){
+          userNumberArray[i] = "Pong";
+
+        }else if(userNumberArray[i] % 3 === 0){
+          userNumberArray[i] = "Ping";
+
+        }else{
+          //Nothing Happens;
+        };
+      };
+      alert(userNumberArray);
+    };
+
+    replaceWords();
 
 
 
