@@ -4,13 +4,13 @@ $(function(){
 
   //Global Scope Variables
 
-  var userInput = 0;
+  var userNumber = 10;
 
   //STEP1: given userInput, check if it is a number
     //if True: userInput was NOT number: return error sentence
 
   var checkIfNotNumber = function(){
-    if(isNaN(userInput)){
+    if(isNaN(userNumber)){
       alert("Please Type Nunber");
     }else{
       alert("Number"); //for Debug
@@ -26,6 +26,21 @@ $(function(){
 
 
   //STEP2: given Usernumber, output the array
+  var convertToArray = function(userNumber){
+
+    var userNumberArray = [];
+    for(var i = 0; i < userNumber; i++){
+      userNumberArray[i] = i + 1;
+    }
+    alert(userNumberArray);
+  };
+
+  convertToArray(userNumber);
+
+
+
+
+
 
   //STEP3: given the array, replace the specific numbers of array to according words;
   //using for-loop and when if you found either 15 or 5 or 3, replace
