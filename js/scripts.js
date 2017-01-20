@@ -19,9 +19,6 @@ $(function(){
     };
   };
 
-  checkIfNotNumber();
-
-
 
 
 
@@ -31,10 +28,9 @@ $(function(){
     for(var i = 0; i < userNumber; i++){
       userNumberArray[i] = i + 1;
     }
-    alert(userNumberArray);
   };
 
-  convertToArray();
+
 
 
 
@@ -61,10 +57,9 @@ $(function(){
           //Nothing Happens;
         };
       };
-      alert(userNumberArray);
     };
 
-    replaceWords();
+
 
 
 
@@ -72,25 +67,30 @@ $(function(){
 
   var showResult = function(){
     userNumberArray.forEach(function(userNumberArray){
-      alert("Result:" + userNumberArray);
+      console.log("Result:" + userNumberArray);
     });
   }
-  showResult();
+
+
+///////BACK END LOGIC ENDS////////////////////////
 
 
 //FRONT LOGIC GOES HERE
 
-  //Implement tryagain (previous output disappeared and user can try again)
 
   //get the userInput
 
   //call func STEP1
+  checkIfNotNumber();
 
   //call func STEP2
+  convertToArray();
 
   //call func STEP3
+  replaceWords();
 
   //Call func Step4 Display:: show the result of the array
+  showResult();
   //"<li>" + "</li>""
 
   ///If I finished early,

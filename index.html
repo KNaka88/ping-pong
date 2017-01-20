@@ -12,8 +12,42 @@
     <header>
     </header>
 
-
     <main>
+      <div class="container">
+        <div class="jumbotron">
+          <h2>Ping-Pong</h3>
+        </div>
+        <div class="panel">
+          <div class="panel-header">
+            <h3>Let's Play!</h3>
+          </div>
+          <div class="panel-body">
+            <h4>Rules:</h4>
+            <p>Ping Pong will count up to your number from 1 with the following exceptions:</p>
+            <ol>
+              <li>Numbers divisible by 3 become "ping"</li>
+              <li>Numbers divisible bu 5 become "pong"</li>
+              <li>Numbers divisible by 3 and 5 become "ping-pong"</li>
+            </ol>
+
+            <form>
+              <label for="userNumber">Type Number Here</label>
+              <input id="userNumber" type="text" class="form-control">
+              <button type="submit" class="btn">Submit</submit>
+            </form>
+          </div> <!--End of Panel Body-->
+        </div> <!--End of Panel -->
+
+
+
+<!-- Initially Hidden: Results are added by Javascript  -------------->
+        <div id="show-results">
+          <h3>Result</h3>
+          <ul>
+            <!-- results are added here -->
+          </ul>
+        </div> <!--End of #results-->
+      </div> <!--End of Container-->
     </main>
 
     <footer>
